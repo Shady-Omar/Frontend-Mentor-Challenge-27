@@ -1,0 +1,347 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden; 
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: hsl(230, 100%, 99%);
+    background-image: url(images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    margin-bottom: 3rem;
+}
+
+.text h1 {
+    color: hsl(227, 35%, 25%);
+    margin-bottom: 0;
+    font-weight: 800;
+}
+.text p {
+    color: hsl(225, 20%, 60%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: rgb(0 0 0 / 15%) -6px 6px 24px;
+    width: 125%;
+}
+
+.container .price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.container .price #dollar {
+    color: hsl(227, 35%, 25%);
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.container .price .st {
+    color: hsl(225, 20%, 60%);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+.container .price .nd {
+    color: hsl(225, 20%, 60%);
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container .price .nd #price {
+    color: hsl(227, 35%, 25%);
+    font-weight: 800;
+    font-size: 2em;
+    margin-right: 5px;
+}
+
+.container .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.container .slider input[type="range"] {
+    width: 28rem;
+    outline: none;
+    appearance: none;
+    background-color: hsl(174, 77%, 80%);
+    border-radius: 1rem;
+    height: 10px;
+    cursor: pointer;
+}
+
+.container .slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    background: hsl(174, 86%, 45%);
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: hsla(174, 86%, 45%, 0.6) -6px 6px 24px;
+}
+
+
+.container .slider input[type="range"]::-moz-range-thumb {
+    width: 35px;
+    height: 35px;
+    background: hsl(174, 86%, 45%);
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: hsla(174, 86%, 45%, 0.6) -6px 6px 24px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 0.5rem;
+    transform: scale(0.7);
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.radio:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .radio {
+    background-color: hsl(174, 77%, 80%);
+}
+
+input:focus + .radio {
+    box-shadow: 0 0 1px hsl(174, 77%, 80%);
+}
+
+input:checked + .radio:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.radio.round {
+    border-radius: 34px;
+}
+
+.radio.round:before {
+    border-radius: 50%;
+}
+
+.discount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+}
+
+.bill {
+    color: hsl(225, 20%, 60%);
+    font-size: 15px;
+}
+
+.bill:last-of-type {
+    position: relative;
+}
+
+.bill:last-of-type::after {
+    content: "25% discount";
+    position: absolute;
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-size: 11px;
+    width: 100%;
+    margin-left: 7px;
+    margin-top: 2px;
+    padding: 2px 0px;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.line {
+    border-bottom: 1px solid hsl(225deg 20% 60% / 25%);
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.trial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.trial .prop p {
+    color: hsl(225, 20%, 60%);
+    font-size: 15px;
+    position: relative;
+}
+
+.trial .prop p::before {
+    content: url("images/icon-check.svg");
+    position: absolute;
+    left: -1rem;
+}
+
+.trial button {
+    border: none;
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(223, 50%, 87%);
+    font-weight: 800;
+    padding: 0.8rem 3rem;
+    border-radius: 2rem;
+    font-family: 'Manrope', sans-serif;
+    transition: 0.2s;
+}
+
+.trial button:hover {
+    color: white;
+}
+
+#ageOutputId {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-size: cover;
+    }
+    
+    main {
+        max-width: 100%;
+        min-width:375px;
+    }
+
+    .text h1 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .text p {
+        width: 55%;
+        text-align: center;
+        line-height: 2em;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .container .price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 1.5rem 0;
+    }
+
+    .container .price .nd {
+        color: hsl(225, 20%, 60%);
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transform: translateY(5rem);
+    }
+
+    .container .slider {
+        transform: translateY(-4rem);
+    }
+
+    .container .slider input[type="range"] {
+        width: 18rem;
+    }
+
+    .bill {
+        font-size: 12px;
+    }
+
+    .bill:last-of-type::after {
+        content: "-25%";
+        width: 50%;
+        margin-left: 7px;
+        margin-top: 0px;
+    }
+
+    .trial {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prop p {
+        margin: 5px 0;
+    }
+
+    .trial button {
+        margin: 2rem 0;
+    }
+}
